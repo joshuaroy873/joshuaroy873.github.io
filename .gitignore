@@ -1,1 +1,2 @@
-ignore_folder*
+_site/
+.jekyll-cache/
