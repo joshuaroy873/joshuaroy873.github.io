@@ -104,39 +104,25 @@ span.highlight {
 //@import "highlights";
 //@import "svg-icons";
 
-// Mobile responsive - reorder image after heading
+// Mobile responsive - center image after heading
 @media screen and (max-width: 640px) {
-  table tr {
-    display: grid;
-    grid-template-columns: 1fr;
+  table table tr[style*="padding"] {
+    display: block;
   }
   
-  table tr td:first-child {
-    display: contents;
-  }
-  
-  table tr h1 {
-    order: 1;
+  table table tr[style*="padding"] td:first-child {
     width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center;
+    padding: 2.5% !important;
   }
   
-  table tr td:last-child {
-    order: 2;
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: center;
+  table table tr[style*="padding"] td:last-child {
+    display: none;
   }
   
-  table tr td:first-child p {
-    order: 3;
-    width: 100% !important;
-  }
-  
-  table tr td:last-child img {
+  .mobile-profile-img {
+    display: block !important;
     width: 50% !important;
     max-width: 50% !important;
-    margin: 0 auto;
+    margin: 20px auto !important;
   }
 }
