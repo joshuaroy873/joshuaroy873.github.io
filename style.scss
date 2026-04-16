@@ -104,15 +104,39 @@ span.highlight {
 //@import "highlights";
 //@import "svg-icons";
 
-// Mobile responsive - reorder image after title
+// Mobile responsive - reorder image after heading
 @media screen and (max-width: 640px) {
   table tr {
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-columns: 1fr;
   }
   
-  table tr td {
+  table tr td:first-child {
+    display: contents;
+  }
+  
+  table tr h1 {
+    order: 1;
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+  
+  table tr td:last-child {
+    order: 2;
     width: 100% !important;
     max-width: 100% !important;
+    text-align: center;
+  }
+  
+  table tr td:first-child p {
+    order: 3;
+    width: 100% !important;
+  }
+  
+  table tr td:last-child img {
+    width: 50% !important;
+    max-width: 50% !important;
+    margin: 0 auto;
   }
 }
